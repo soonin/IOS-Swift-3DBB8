@@ -20,14 +20,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        // creating a sphear and assigning it the texture / image of the moon
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let sphere = SCNSphere(radius: 0.2)
         
-        // Set the scene to the view
-        sceneView.scene = scene
+        let material = SCNMaterial()
+        
+        material.diffuse.contents = UIImage(named: "<#T##String#>")
     }
     
     override func viewWillAppear(_ animated: Bool) {
